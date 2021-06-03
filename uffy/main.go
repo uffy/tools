@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/uffy/uffy/cmd"
+	"github.com/uffy/tools/cmd"
 	"log"
 )
 

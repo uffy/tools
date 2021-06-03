@@ -32,13 +32,13 @@ var json2csvCmd = &cobra.Command{
 		var headers []string
 		headersSet := map[string]int{}
 
-		record := make([]string, 0)    // for IDE lint
 		records := make([][]string, 1) // first element for headers
 		for _, line := range lines {
 			lineMap := map[string]json.RawMessage{}
 			if err := json.Unmarshal(line, &lineMap); err != nil {
 				continue
 			}
+			record := make([]string, len(headers)) // for IDE lint
 			for h, c := range lineMap {
 				if _, ok := headersSet[h]; !ok {
 					headers = append(headers, h)

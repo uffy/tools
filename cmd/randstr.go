@@ -32,6 +32,7 @@ var randStrCmd = &cobra.Command{
 		}
 
 		randStr := base64UrlReplacer.Replace(base64.RawURLEncoding.EncodeToString(buf))
+		randStr = randStr[:l]
 
 		fmt.Println(randStr)
 		fmt.Println(strings.ToLower(randStr))

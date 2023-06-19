@@ -40,7 +40,3 @@ var randStrCmd = &cobra.Command{
 		return nil
 	},
 }
-
-func init() {
-	rootCmd.AddCommand(randStrCmd)
-}

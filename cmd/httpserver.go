@@ -22,7 +22,3 @@ var httpServerCmd = &cobra.Command{
 		}))
 	},
 }
-
-func init() {
-	rootCmd.AddCommand(httpServerCmd)
-}

@@ -16,8 +16,6 @@ var json2csvCmd = &cobra.Command{
 }
 
 func init() {
-	json2csvCmd.PersistentFlags().StringP("file", "f", "", "json filename")
-	json2csvCmd.PersistentFlags().StringP("output", "o", "{json_filename}.csv", "output filename")
-
-	rootCmd.AddCommand(json2csvCmd)
+	json2csvCmd.Flags().StringP("file", "f", "", "json filename")
+	json2csvCmd.Flags().StringP("output", "o", "{json_filename}.csv", "output filename")
 }

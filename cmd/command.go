@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/uffy/tools/cmd/time"
 	"github.com/uffy/tools/cmd/url"
 )
 
@@ -19,7 +20,8 @@ func NewRoodCmd() *cobra.Command {
 	cmd.AddCommand(httpServerCmd)
 	cmd.AddCommand(json2csvCmd)
 	cmd.AddCommand(randStrCmd)
-	cmd.AddCommand(url.NewUrlCmd())
+	cmd.AddCommand(url.New())
+	cmd.AddCommand(time.New())
 
 	return cmd
 }

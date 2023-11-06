@@ -20,6 +20,7 @@ func New() *cobra.Command {
 	}
 
 	cmd.AddCommand(newJoin())
+	cmd.AddCommand(newMap())
 
 	return cmd
 

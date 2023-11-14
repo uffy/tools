@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
+	"github.com/uffy/tools/cmd/pkg"
 	"github.com/uffy/tools/cmd/sql"
 	"github.com/uffy/tools/cmd/str"
 	"github.com/uffy/tools/cmd/time"
@@ -26,6 +27,7 @@ func NewRoodCmd() *cobra.Command {
 	cmd.AddCommand(time.New())
 	cmd.AddCommand(sql.New())
 	cmd.AddCommand(str.New())
+	cmd.AddCommand(pkg.New())
 
 	return cmd
 }
